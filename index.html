@@ -2,12 +2,82 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon premier site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>La Boutique Parfumée</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Bienvenue sur mon site !</h1>
-  <p>Ceci est la première page de mon site internet.</p>
-  <script src="script.js"></script>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="#" class="logo">La Boutique Parfumée</a>
+      <ul class="nav-links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+    <section id="home" class="hero container">
+      <h1>Éveillez vos sens</h1>
+      <p>Découvrez notre sélection exclusive de parfums haut de gamme.</p>
+      <a href="#collection" class="btn">Voir la collection</a>
+    </section>
+  </header>
+
+  <main>
+    <section id="collection" class="container products-grid">
+      <!-- Exemples de fiches parfum -->
+      <article class="product-card">
+        <img src="assets/images/perfume1.jpg" alt="Parfum Élégance">
+        <div class="product-info">
+          <h2>Élégance</h2>
+          <p class="description">Un floral boisé raffiné, idéal pour les soirées.</p>
+          <ul class="notes">
+            <li><strong>Notes de tête :</strong> Bergamote, Poire</li>
+            <li><strong>Notes de cœur :</strong> Jasmin, Rose</li>
+            <li><strong>Notes de fond :</strong> Santal, Musc blanc</li>
+          </ul>
+          <a href="https://exemple.com/produit/elegance" target="_blank" class="btn-small">Voir en ligne</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="assets/images/perfume2.jpg" alt="Parfum Mystère">
+        <div class="product-info">
+          <h2>Mystère</h2>
+          <p class="description">Un oriental épicé, une signature envoûtante.</p>
+          <ul class="notes">
+            <li><strong>Notes de tête :</strong> Poivre rose, Cardamome</li>
+            <li><strong>Notes de cœur :</strong> Œillet, Cannelle</li>
+            <li><strong>Notes de fond :</strong> Vanille, Patchouli</li>
+          </ul>
+          <a href="https://exemple.com/produit/mystere" target="_blank" class="btn-small">Voir en ligne</a>
+        </div>
+      </article>
+
+      <!-- Duplique et adapte ces blocs pour chaque parfum -->
+    </section>
+
+    <section id="about" class="container about">
+      <h2>Qui sommes-nous ?</h2>
+      <p>Passionnés par les arômes rares et les jus d’exception, nous sélectionnons pour vous les fragrances les plus subtiles et durables.</p>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer container">
+    <div>
+      <h3>Contact</h3>
+      <p>Email : contact@boutiqueparfumee.fr</p>
+      <p>Téléphone : +33 1 23 45 67 89</p>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Facebook">Fb</a>
+      <a href="#" aria-label="Instagram">Ig</a>
+      <a href="#" aria-label="Twitter">Tw</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
