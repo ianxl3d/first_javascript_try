@@ -4,77 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>La Boutique Parfumée</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a href="#" class="logo">La Boutique Parfumée</a>
-      <ul class="nav-links">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#collection">Collection</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">La Boutique Parfumée</a>
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Accueil</a></li>
+        <li><a href="#collection" class="nav__link">Collection</a></li>
+        <li><a href="#about" class="nav__link">À propos</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
-      <button class="menu-toggle">☰</button>
+      <button class="nav__toggle"><span></span><span></span><span></span></button>
     </nav>
-    <section id="home" class="hero container">
-      <h1>Éveillez vos sens</h1>
-      <p>Découvrez notre sélection exclusive de parfums haut de gamme.</p>
-      <a href="#collection" class="btn">Voir la collection</a>
+
+    <section id="home" class="hero">
+      <div class="hero__content container">
+        <h1 class="hero__title">Éveillez vos sens</h1>
+        <p class="hero__subtitle">Une sélection exclusive de parfums d’exception.</p>
+        <a href="#collection" class="btn">Voir la collection</a>
+      </div>
     </section>
   </header>
 
   <main>
-    <section id="collection" class="container products-grid">
-      <!-- Exemples de fiches parfum -->
-      <article class="product-card">
-        <img src="assets/images/perfume1.jpg" alt="Parfum Élégance">
-        <div class="product-info">
-          <h2>Élégance</h2>
-          <p class="description">Un floral boisé raffiné, idéal pour les soirées.</p>
-          <ul class="notes">
-            <li><strong>Notes de tête :</strong> Bergamote, Poire</li>
-            <li><strong>Notes de cœur :</strong> Jasmin, Rose</li>
-            <li><strong>Notes de fond :</strong> Santal, Musc blanc</li>
-          </ul>
-          <a href="https://exemple.com/produit/elegance" target="_blank" class="btn-small">Voir en ligne</a>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img src="assets/images/perfume2.jpg" alt="Parfum Mystère">
-        <div class="product-info">
-          <h2>Mystère</h2>
-          <p class="description">Un oriental épicé, une signature envoûtante.</p>
-          <ul class="notes">
-            <li><strong>Notes de tête :</strong> Poivre rose, Cardamome</li>
-            <li><strong>Notes de cœur :</strong> Œillet, Cannelle</li>
-            <li><strong>Notes de fond :</strong> Vanille, Patchouli</li>
-          </ul>
-          <a href="https://exemple.com/produit/mystere" target="_blank" class="btn-small">Voir en ligne</a>
-        </div>
-      </article>
-
-      <!-- Duplique et adapte ces blocs pour chaque parfum -->
+    <section id="collection" class="products container">
+      <h2 class="section__title">Notre Collection</h2>
+      <div class="grid">
+        <!-- Exemple de carte parfum -->
+        <article class="card">
+          <div class="card__img-wrapper">
+            <img src="assets/images/perfume1.jpg" alt="Parfum Élégance" class="card__img">
+            <div class="card__overlay">
+              <a href="#!" class="card__btn">Détails</a>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Élégance</h3>
+            <p class="card__desc">Floral boisé raffiné, idéal pour les soirées.</p>
+            <ul class="card__notes">
+              <li><strong>Tête :</strong> Bergamote, Poire</li>
+              <li><strong>Cœur :</strong> Jasmin, Rose</li>
+              <li><strong>Fond :</strong> Santal, Musc blanc</li>
+            </ul>
+            <a href="https://exemple.com/produit/elegance" target="_blank" class="btn-small">Voir en ligne</a>
+          </div>
+        </article>
+        <!-- Dupliquez ce bloc pour chaque parfum -->
+      </div>
     </section>
 
-    <section id="about" class="container about">
-      <h2>Qui sommes-nous ?</h2>
-      <p>Passionnés par les arômes rares et les jus d’exception, nous sélectionnons pour vous les fragrances les plus subtiles et durables.</p>
+    <section id="about" class="about container">
+      <h2 class="section__title">Qui sommes-nous ?</h2>
+      <p>Nous parcourons le monde à la recherche de fragrances rares et subtiles, pour vous offrir des expériences olfactives inoubliables.</p>
     </section>
   </main>
 
-  <footer id="contact" class="site-footer container">
-    <div>
+  <footer id="contact" class="footer container">
+    <div class="footer__col">
       <h3>Contact</h3>
       <p>Email : contact@boutiqueparfumee.fr</p>
-      <p>Téléphone : +33 1 23 45 67 89</p>
+      <p>Tél : +33 1 23 45 67 89</p>
     </div>
-    <div class="social">
-      <a href="#" aria-label="Facebook">Fb</a>
-      <a href="#" aria-label="Instagram">Ig</a>
-      <a href="#" aria-label="Twitter">Tw</a>
+    <div class="footer__col">
+      <h3>Suivez-nous</h3>
+      <div class="social">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Twitter">TW</a>
+      </div>
     </div>
   </footer>
 
